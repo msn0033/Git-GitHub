@@ -4,8 +4,8 @@ int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
 PrintNumber("numbers", arr);
-PrintNumber("even", arr.Where(x=>IsEven(x)));
-PrintNumber("odd", arr.Where(x=>IsOdd(x)));
+PrintNumber("even", arr.Where(x => IsEven(x)));
+PrintNumber("odd", arr.Where(x => IsOdd(x)));
 
 
 void PrintNumber(string title, IEnumerable<int> numbers)
@@ -19,11 +19,8 @@ void PrintNumber(string title, IEnumerable<int> numbers)
     System.Console.Write(" ]");
     System.Console.WriteLine();
 }
-bool IsEven(int number){
-    return  number %2==0;
-}
-bool IsOdd(int number){
-    return  number %2!=0;
-}
+
+bool IsEven(int number) => number % 2 == 0;
+bool IsOdd(int number) => !IsEven(number);
 
 
